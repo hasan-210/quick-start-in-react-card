@@ -60,14 +60,14 @@ const array = [
           <Route path="*" element={<Alert img= {img_alert} />} />
         </Routes>
         </BrowserRouter> */}
-            {array.length > 0 ( 
+            {array.length > 0 ? ( 
             array.map((e,i)=>{
             return (
                   <Card key={i} title={e.title} img={e.img} con={con}/>
             )
           })
             ) 
-        //  : <Alert img={img_alert}/>
+         : <Alert img={img_alert}/>
         }
      </div>
    );
