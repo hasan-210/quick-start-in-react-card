@@ -34,7 +34,7 @@ function App() {
 //   setx(x -1);
 // }
 const con = (a)=> {
-  window.location.href = "https://www.facebook.com/profile.php?id=100009786425806";
+ window.location.href = "https://www.facebook.com/profile.php?id=100009786425806"
 }
 const array = [ 
   {title:"fastandfurios",img:img1},
@@ -50,24 +50,24 @@ const array = [
 
   return (
     <div className="App">
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
           {/* <Main/> */}
 
-        <Routes>
-          <Route path="/" element={array.length > 0 ? ( 
+        {/* <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/header" element={<Header/>} />
+          <Route path="/footer" element={<Footer/>} />
+          <Route path="*" element={<Alert img= {img_alert} />} />
+        </Routes>
+        </BrowserRouter> */}
+            {array.length > 0 ? ( 
             array.map((e,i)=>{
             return (
                   <Card key={i} title={e.title} img={e.img} con={con}/>
             )
           })
             ) 
-         : <Alert img={img_alert}/>} />
-          <Route path="/header" element={<Header/>} />
-          <Route path="/footer" element={<Footer/>} />
-          <Route path="*" element={<Alert img= {img_alert} />} />
-        </Routes>
-        </BrowserRouter>
-            {
+         : <Alert img={img_alert}/>
         }
      </div>
    );
